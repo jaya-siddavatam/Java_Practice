@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  
+  <display-name>ServletWithJdbc</display-name>
+  <servlet>
+    <description></description>
+    <display-name>LoginControler</display-name>
+    <servlet-name>LoginControler</servlet-name>
+    <servlet-class>com.login.LoginControler</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginControler</servlet-name>
+    <url-pattern>/LoginControler</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Home</display-name>
+    <servlet-name>Home</servlet-name>
+    <servlet-class>com.home.Home</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Home</servlet-name>
+    <url-pattern>/Home</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Product</display-name>
+    <servlet-name>Product</servlet-name>
+    <servlet-class>com.login.Product</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Product</servlet-name>
+    <url-pattern>/Product</url-pattern>
+  </servlet-mapping>
+</web-app>
