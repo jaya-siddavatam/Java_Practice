@@ -25,7 +25,7 @@ public class EmployeeDao {
 //pstmt.setString(2, emp.getName()); // using emp object we can fetch the methods of bean class
 //pstmt.setFloat(3, emp.getSalar());
 //        int res = pstmt.executeUpdate();
-//        return res;
+//        return res;                 // res return the no of rows effected
 //        } catch (Exception e) {
 //            System.out.println(e);
 //            return 0;
@@ -40,9 +40,9 @@ public class EmployeeDao {
 		SessionFactory sf = con.buildSessionFactory();
 		Session session = sf.openSession();
 		
-		Transaction tran = session.getTransaction();
+		Transaction tran = session.getTransaction(); //because DML statements are not auto commit(record doesnt save in db) in hibernate we have to use transaction
 		tran.begin();
-		session.save(emp);
+		session.save(emp);     // we are directly saving the object of bean class // for insert query
 		tran.commit();
 		return 1;
 		}catch(Exception e) {
@@ -64,11 +64,11 @@ public class EmployeeDao {
 //	            emp.setId(rs.getInt(1));
 //	            emp.setName(rs.getString(2));
 //	            emp.setSalar(rs.getFloat(3));
-//	            listOfEmp.add(emp);
+//	            listOfEmp.add(emp);    // for each iteration one row is added to the list
 //	        }
 //	        } catch (Exception e) {
 //	        
 //	        }
-//	        return listOfEmp;
+//	        return listOfEmp;     //returns rows present in db
 //	    }
 }

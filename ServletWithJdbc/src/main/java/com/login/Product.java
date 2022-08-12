@@ -43,16 +43,22 @@ public class Product extends HttpServlet {
 			Statement st = con.createStatement();
 			
 		
-			ResultSet rs  = st.executeQuery("select * from product where id="+productid);
+			ResultSet rs  = st.executeQuery("select name from product where id="+productid);
 			
 			
 			if(rs.next()) {
-				pw.println("successfully fetched and you are product name is");
-				pw.print( rs.getString("name"));
+				pw.println("successfully fetched and you are product name is  ");
+				pw.print( rs.getString(1));                                   
+				pw.println("<br>Search for another product</br>");
+				rd.include(request, response); 
+				
 			}else {
 				pw.println("Enter the available product id in DB <br>");
 				rd.include(request, response);    
 				}
+			st.close();
+			con.close();
+			
 		}
 			catch (Exception e) {
 	

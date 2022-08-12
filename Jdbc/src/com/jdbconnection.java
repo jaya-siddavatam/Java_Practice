@@ -44,6 +44,7 @@ public static void main (String[] args) throws Exception {
 //		else {
 //			System.out.println("Record not found");
 //		}
+		
 		//update query
 //		int res = stmt.executeUpdate("update employee set salar=27000 where id =1");//res returns the no of rows affected.
 //		if(res>0) {

@@ -7,6 +7,7 @@ import com.service.EmployeeService;
 
 public class DemoTest {
 	public static void main(String[] args) {
+		//to store record of employee
 		Employee emp1 = new Employee();
         emp1.setId(8);
         emp1.setName("sagar");

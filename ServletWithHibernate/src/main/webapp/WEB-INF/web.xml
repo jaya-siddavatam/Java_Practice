@@ -19,4 +19,54 @@
     <servlet-name>ProductStoreControler</servlet-name>
     <url-pattern>/ProductStoreControler</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductDeleteController</display-name>
+    <servlet-name>ProductDeleteController</servlet-name>
+    <servlet-class>com.controller.ProductDeleteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductDeleteController</servlet-name>
+    <url-pattern>/ProductDeleteController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProductController</display-name>
+    <servlet-name>UpdateProductController</servlet-name>
+    <servlet-class>com.controller.UpdateProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProductController</servlet-name>
+    <url-pattern>/UpdateProductController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FindProductController</display-name>
+    <servlet-name>FindProductController</servlet-name>
+    <servlet-class>com.controller.FindProductController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FindProductController</servlet-name>
+    <url-pattern>/FindProductController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetriveProductDetails</display-name>
+    <servlet-name>RetriveProductDetails</servlet-name>
+    <servlet-class>com.controller.RetriveProductDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetriveProductDetails</servlet-name>
+    <url-pattern>/RetriveProductDetails</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProductnameandpriceController</display-name>
+    <servlet-name>ProductnameandpriceController</servlet-name>
+    <servlet-class>com.controller.ProductnameandpriceController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductnameandpriceController</servlet-name>
+    <url-pattern>/ProductnameandpriceController</url-pattern>
+  </servlet-mapping>
 </web-app>

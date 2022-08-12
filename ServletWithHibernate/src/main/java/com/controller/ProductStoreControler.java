@@ -1,6 +1,5 @@
 package com.controller;
 
-
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -41,15 +40,18 @@ public class ProductStoreControler extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		
 		PrintWriter pw = response.getWriter();
 		
 		response.setContentType("text/html");
 		
-		int pid = Integer.parseInt(request.getParameter("pid"));
+		int pid = Integer.parseInt(request.getParameter("pid")); //changes string to integer
+		
 		String pname = request.getParameter("pname");
 		float price = Float.parseFloat(request.getParameter("price"));
 		
 		Products p = new Products();
+		
 		p.setPid(pid);
 		p.setPname(pname);
 		p.setPrice(price);
@@ -59,6 +61,7 @@ public class ProductStoreControler extends HttpServlet {
 		String result = ps.storeProduct(p);
 		
 		pw.print(result);
+		
 		RequestDispatcher rd = request.getRequestDispatcher("store.html");
 		rd.include(request, response);
 		
