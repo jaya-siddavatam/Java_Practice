@@ -17,12 +17,11 @@
 //int a = 20;
 //int b = 30;
 //int product = a*b;
-product = a*b;
-out.println("Welcome to JSP<br>");
-out.println("\n Product of two numbers is "+product);
 a = 20;
 b =40;
 product = a*b;
+out.println("Welcome to JSP<br>");
+out.println("\n Product of two numbers is "+product);
 %>
 <br>
 <p>Product of two numbers is <%=10*20 %> </p>

@@ -11,10 +11,12 @@
 <h2>Welcome to Home Page ${sessionScope.obj}</h2>
 
 <%
-String name = (String) session.getAttribute("obj");
-out.println(name);
+//String name = (String) session.getAttribute("obj");
+//out.println(name);
 %>
 <a href="storetrainer.jsp">Add Trainer Details</a> |
-<a href="storeStudent.jsp">Add Student Details</a> | 
+<a href="storeStudent.jsp">Add Student Details</a> |
+<a href ="TrainerController">View all trainer details</a> |
+<a href ="StudentController">View all student details</a> |
 </body>
 </html>

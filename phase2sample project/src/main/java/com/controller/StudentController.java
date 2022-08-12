@@ -42,8 +42,7 @@ public class StudentController extends HttpServlet {
 		response.setContentType("text/html");
 		hs.setAttribute("listofstudent", listofstudent);
 	    response.setContentType("text/html");
-	    response.sendRedirect("ViewStudent.jsp");
-	
+	    response.sendRedirect("viewstudents.jsp");
 	}
 
 	/**

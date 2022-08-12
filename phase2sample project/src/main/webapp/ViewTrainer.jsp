@@ -18,8 +18,8 @@
     <th>Tech</th>
 </tr>
 <%
-Object obj = session.getAttribute("listOfTrainer");
-List<Trainer> listOfTrainer = (List<Trainer>)obj;
+Object obj = session.getAttribute("listoftrainer"); //it is in object format
+List<Trainer> listOfTrainer = (List<Trainer>) obj; // typecaste to list of trainer
 Iterator<Trainer> li = listOfTrainer.iterator();
 while(li.hasNext()){
     Trainer t = li.next();
@@ -35,6 +35,20 @@ while(li.hasNext()){
 </table>
 <br/>
 <h2>Display Trainer records using JSTL</h2>
-<a href="Home.jsp">Main</a>
+<table border="1">
+	<tr>
+	<th>TID</th>
+	<th>TName</th>
+	<th>Tech</th>
+	</tr>
+<core:forEach items="${sessionScope.listoftrainer}" var="t">
+	<tr>
+		<td><core:out value="${t.tid}"></core:out> </td>
+		<td><core:out value="${t.tname}"></core:out> </td>
+		<td><core:out value="${t.tech}"></core:out> </td>
+	</tr>
+</core:forEach>
+</table>
+<a href="Homr.jsp">Go to Main page </a>
 </body>
 </html>

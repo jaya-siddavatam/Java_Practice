@@ -43,4 +43,14 @@ public List<Trainer> findalltrainer() {
         return listoftrainer;
 
 }
+// to retrieve trainer technology and student details
+public List<Object[]> findTrainerAndStudentDetails() {
+	Configuration con = new Configuration();
+	con.configure("hibernate.cfg.xml");
+	SessionFactory sf = con.buildSessionFactory();
+	Session session = sf.openSession();
+	TypedQuery qry = session.createQuery("select t.tname,t.tech,s.sname from Trainer t, Student s where t.tid = s.tsid");//tsid is foreginkey
+	List<Object[]> listOfTrainer = qry.getResultList();
+	return listOfTrainer;
+}
 }
