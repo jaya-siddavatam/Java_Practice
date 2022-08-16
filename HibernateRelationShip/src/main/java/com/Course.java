@@ -17,7 +17,7 @@ private int cid;
 private String cname;
 private float fess;
 @OneToMany
-@JoinColumn(name="csid")
+@JoinColumn(name="csid") //one course can take multiple students
 private List<Students> listofstudents;
 public int getCid() {
 	return cid;
@@ -43,7 +43,6 @@ public List<Students> getListofstudents() {
 
 public void setListofstudents(List<Students> listofstudents) {
 	this.listofstudents = listofstudents;
-
 }
 @Override
 public String toString() {

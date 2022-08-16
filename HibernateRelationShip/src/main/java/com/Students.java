@@ -15,7 +15,6 @@ private String sname;
 private int age;
 
 private Integer tsid;    //wrapper class allow null values because tsid is a FK
-
 private Integer csid;
 public Integer getCsid() {
 	return csid;

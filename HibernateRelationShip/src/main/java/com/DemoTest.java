@@ -17,7 +17,7 @@ public class DemoTest {
 		Transaction tran = session.getTransaction();
 		
 		System.out.println("Table was created for you");
-		
+
 //		Trainer tr = new Trainer();
 //		tr.setTid(105);
 //		tr.setTname("Navin Reddy");
@@ -47,16 +47,16 @@ public class DemoTest {
 //		System.out.println("Course saved successfully");
 //	
 		// Assign Student with Trainer;
-//		Students s1 = session.get(Students.class, 5);
-//		
-//		if(s1==null) {
-//			System.out.println("Student not present");
-//		}else {
-//				tran.begin();
-//				s1.setTsid(102);
-//				session.update(s1);
-//				tran.commit();
-//				System.out.println("Student assigned to trainer successfully");
-//		}	
+		Students s1 = session.get(Students.class, 5); // one student 5th
+		
+		if(s1==null) {
+			System.out.println("Student not present");
+		}else {
+				tran.begin();
+				s1.setTsid(102);  //is assigned to trainer 102
+				session.update(s1);
+				tran.commit();
+				System.out.println("Student assigned to trainer successfully");
+		}	
 	}
 }
