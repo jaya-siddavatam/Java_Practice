@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Build-Jdk-Spec: 11
+Implementation-Title: Online_Quiz_Portal_Using_REST_APIs
+Implementation-Version: 0.0.1-SNAPSHOT
+Created-By: Maven Integration for Eclipse
+
